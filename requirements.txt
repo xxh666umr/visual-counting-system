@@ -1,0 +1,9 @@
+# 运行环境：Python 3.10+，纯 CPU 即可
+# torch 装 CPU 版能省下几个 GB：
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+ultralytics>=8.3
+torch>=2.4
+opencv-python>=4.9
+numpy>=1.26
+PyYAML>=6.0
