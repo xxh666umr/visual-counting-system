@@ -22,6 +22,8 @@
 |---|---|---|---|---|---|---|---|---|
 | 检出 | 62 | 42 | 18 | 14 | 9 | 8 | 5 | 5 |
 
+> 上表是**原始分辨率**下的结果。`samples/` 里的 4 张示例图经过压缩（长边 900px），跑出来会略有出入（实测 15 / 64 / 43 / 6），属正常现象。
+
 **视频实测**（`bottle_walk.mp4`，10 秒 / 300 帧 / 1280×720 @30fps）：
 
 | 指标 | 数值 | 说明 |
@@ -67,6 +69,8 @@ python main.py data/videos/xx.mp4 --show        # 跑视频 + 实时弹窗预览
 python main.py --target car --conf 0.25         # 数汽车 / 改阈值
 python main.py --model runs/train/weights/best.pt   # 换自己训练的模型
 ```
+
+**Windows 用户**：装好依赖后可以直接双击仓库里的 `run.bat`。如果系统里有多个 Python 而依赖装在另一个上，先 `set MT_PYTHON=C:\path\to\python.exe` 再双击。
 
 **关于权重**：项目根目录的 `yolov8n.pt` 不入库（6.4 MB）。首次运行若本地没有，ultralytics 会自动下载官方权重；也可以手动下载后放到项目根目录：
 
